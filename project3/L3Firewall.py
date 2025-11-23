@@ -196,7 +196,7 @@ class Firewall (EventMixin):
 	        # Case 1: new MAC, no entry yet
 	        if src_mac not in self.port_table:
 	            self.port_table[src_mac] = src_ip
-	            log.debug("PT update: %s → %s", src_mac, src_ip)
+	            log.debug("PT update: %s > %s", src_mac, src_ip)
 
 	        else:
 	            # Case 2: MAC already known, check if IP matches
